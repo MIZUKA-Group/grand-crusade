@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c74bvf06h76l0"]
+
+[ext_resource type="Script" uid="uid://c3uspo4ujw288" path="res://boost_orb.gd" id="1_aebn3"]
+[ext_resource type="Texture2D" uid="uid://cnraa3mbj6rcl" path="res://boostorbred.png" id="1_q4vao"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0o3g"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"black",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"blue",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"gs",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"pink",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q4vao")
+}],
+"loop": 1,
+"name": &"red",
+"speed": 12.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"yellow",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8gr1b"]
+radius = 5.0
+
+[node name="BoostOrb" type="Area2D" unique_id=270632774]
+collision_layer = 5
+collision_mask = 5
+script = ExtResource("1_aebn3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1962351500]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_r0o3g")
+animation = &"red"
+autoplay = "red"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=28951797]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_8gr1b")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ctx8c05s0f2a5"]
+
+[ext_resource type="Texture2D" uid="uid://bfujvyg0sxkur" path="res://istanbul.jpg" id="1_vhefo"]
+[ext_resource type="Texture2D" uid="uid://doqaurqwrn1ne" path="res://pexels-sokil-2159771144-37194840.jpg" id="2_4vvho"]
+
+[node name="TextureRect" type="TextureRect" unique_id=498182540]
+offset_top = -37.0
+offset_right = 256.0
+offset_bottom = 383.0
+texture = ExtResource("1_vhefo")
+expand_mode = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=446135484]
+layout_mode = 0
+offset_left = -35.0
+offset_top = 37.0
+offset_right = 290.0
+offset_bottom = 229.0
+texture = ExtResource("2_4vvho")
+expand_mode = 1

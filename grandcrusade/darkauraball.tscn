@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cstn7hqgmy76e"]
+
+[ext_resource type="Script" uid="uid://mfsd0ugkc6gn" path="res://darkauraball.gd" id="1_4chir"]
+[ext_resource type="Texture2D" uid="uid://c34ywm1yyx0os" path="res://ball test.png" id="1_64vea"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdy7n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_64vea")
+}],
+"loop": 1,
+"name": &"ball1",
+"speed": 12.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_64vea"]
+radius = 15.0
+
+[node name="darkauraball" type="Area2D" unique_id=251626215 groups=["attack_enemy"]]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_4chir")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1708740208]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_wdy7n")
+animation = &"ball1"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079550464]
+shape = SubResource("CircleShape2D_64vea")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

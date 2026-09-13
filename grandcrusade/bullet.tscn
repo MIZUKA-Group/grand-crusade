@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://r6ilo5qisavw"]
+
+[ext_resource type="Texture2D" uid="uid://blo6gox08iaae" path="res://bullet test.png" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://dporlvdbk38ef" path="res://bullet.gd" id="1_v8qja"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0o3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_v7oki")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0o3g"]
+radius = 3.0
+height = 34.0
+
+[node name="Bullet" type="Area2D" unique_id=1087616637 groups=["attack"]]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_v8qja")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1770033979]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_r0o3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1476351086]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_r0o3g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
