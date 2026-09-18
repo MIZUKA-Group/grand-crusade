@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ctdnucc4rqm55"]
+
+[ext_resource type="Texture2D" uid="uid://bj71pdbcnmndb" path="res://Flag_of_Turkey.svg.png" id="1_36fpm"]
+
+[node name="FlagOfTurkey_svg" type="Sprite2D" unique_id=1112655628]
+position = Vector2(144.00002, 95.99999)
+scale = Vector2(0.3, 0.29999998)
+texture = ExtResource("1_36fpm")
+
+[node name="FlagOfTurkey_svg" type="Sprite2D" parent="." unique_id=1502277539]
+position = Vector2(953.9998, -7.390976e-06)
+scale = Vector2(0.9916668, 0.99999994)
+texture = ExtResource("1_36fpm")
+
+[node name="FlagOfTurkey_svg2" type="Sprite2D" parent="." unique_id=59499463]
+position = Vector2(1896.6665, 1.1444092e-05)
+scale = Vector2(0.97222203, 1.0000001)
+texture = ExtResource("1_36fpm")

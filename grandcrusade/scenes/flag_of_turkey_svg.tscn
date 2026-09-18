@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://mdwturxd0oqp"]
+
+[ext_resource type="Texture2D" uid="uid://bj71pdbcnmndb" path="res://Flag_of_Turkey.svg.png" id="1_7vqei"]
+
+[node name="FlagOfTurkey_svg" type="Sprite2D" unique_id=1575773831]
+position = Vector2(142.50002, 95.99999)
+scale = Vector2(0.296875, 0.29999998)
+texture = ExtResource("1_7vqei")

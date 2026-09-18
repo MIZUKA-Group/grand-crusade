@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://bjdd78v4n6v0j"]
+
+[ext_resource type="Script" uid="uid://5x1u27ruecy1" path="res://peri.gd" id="1_77hkt"]
+[ext_resource type="Texture2D" uid="uid://p3xttjohqd4d" path="res://peri(beta).png" id="2_73hhe"]
+[ext_resource type="Texture2D" uid="uid://1y2dc8pvattu" path="res://Character_Run_Sheet.png" id="2_ai1kq"]
+[ext_resource type="AudioStream" uid="uid://cwc5d6th7oaps" path="res://sounds/player/quack-sound-effect.mp3" id="4_1lcj6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8doe5"]
+atlas = ExtResource("2_ai1kq")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6dgql"]
+atlas = ExtResource("2_ai1kq")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r0o3g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8doe5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6dgql")
+}],
+"loop": 1,
+"name": &"attack",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_73hhe")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_73hhe")
+}],
+"loop": 1,
+"name": &"move",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0o3g"]
+radius = 13.0
+height = 40.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=167471536]
+script = ExtResource("1_77hkt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638131411]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_r0o3g")
+animation = &"move"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2004218072]
+shape = SubResource("CapsuleShape2D_r0o3g")
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="." unique_id=992157243]
+stream = ExtResource("4_1lcj6")
+
+[node name="Step" type="AudioStreamPlayer2D" parent="." unique_id=950214952]
+stream = ExtResource("4_1lcj6")

@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bmtamm6mbhdl0"]
+
+[ext_resource type="PackedScene" uid="uid://bht4857ksrgks" path="res://scenes/playerred.tscn" id="1_u2qm4"]
+[ext_resource type="PackedScene" uid="uid://ctdnucc4rqm55" path="res://scenes/backgroundlv1tr.tscn" id="2_xmjw7"]
+[ext_resource type="PackedScene" uid="uid://mc4r6yt738ru" path="res://scenes/groundtest.tscn" id="3_vdxp5"]
+
+[node name="level1tr" type="Node2D" unique_id=326650570]
+
+[node name="CharacterBody2D" parent="." unique_id=167471536 instance=ExtResource("1_u2qm4")]
+z_index = 1
+position = Vector2(-2.7103271, -10.318924)
+
+[node name="FlagOfTurkey_svg" parent="." unique_id=1112655628 instance=ExtResource("2_xmjw7")]
+
+[node name="StaticBody2D" parent="." unique_id=619379658 instance=ExtResource("3_vdxp5")]
