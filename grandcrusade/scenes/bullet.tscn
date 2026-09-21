@@ -1,13 +1,29 @@
 [gd_scene format=3 uid="uid://c7p5mp7nw64fr"]
 
-[ext_resource type="Texture2D" uid="uid://blo6gox08iaae" path="res://bullet test.png" id="1_v7oki"]
-[ext_resource type="Script" uid="uid://c5tkcenhs8q8t" path="res://bullet.gd" id="1_v8qja"]
+[ext_resource type="Script" uid="uid://dporlvdbk38ef" path="res://bullet.gd" id="1_v8qja"]
+[ext_resource type="Texture2D" uid="uid://bf2k36xqn2pw2" path="res://bullet_01.png" id="2_tamys"]
+[ext_resource type="Texture2D" uid="uid://d0ttdeoi5frwc" path="res://bullet_02.png" id="3_26lx3"]
+[ext_resource type="Texture2D" uid="uid://bnq7qxk8t6s7p" path="res://bullet_03.png" id="4_1cfmv"]
+[ext_resource type="Texture2D" uid="uid://cxsydfatcch0c" path="res://bullet_04.png" id="5_k76ql"]
+[ext_resource type="Texture2D" uid="uid://bpc8dfj0mwxm3" path="res://bullet_05.png" id="6_in4mv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_r0o3g"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_v7oki")
+"texture": ExtResource("2_tamys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_26lx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1cfmv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_k76ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_in4mv")
 }],
 "loop": 1,
 "name": &"default",
@@ -16,7 +32,7 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r0o3g"]
 radius = 3.0
-height = 34.0
+height = 22.0
 
 [node name="Bullet" type="Area2D" unique_id=1087616637]
 script = ExtResource("1_v8qja")
