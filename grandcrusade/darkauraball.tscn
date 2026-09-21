@@ -1,13 +1,33 @@
 [gd_scene format=3 uid="uid://cstn7hqgmy76e"]
 
 [ext_resource type="Script" uid="uid://mfsd0ugkc6gn" path="res://darkauraball.gd" id="1_4chir"]
-[ext_resource type="Texture2D" uid="uid://c34ywm1yyx0os" path="res://ball test.png" id="1_64vea"]
+[ext_resource type="Texture2D" uid="uid://dhnk7hdnhpcyq" path="res://dark_aura_ball_01.png" id="2_paw44"]
+[ext_resource type="Texture2D" uid="uid://ctlofbieqwoy" path="res://dark_aura_ball_02.png" id="3_xlbao"]
+[ext_resource type="Texture2D" uid="uid://cvbvmdnfvkix5" path="res://dark_aura_ball_03.png" id="4_e4gti"]
+[ext_resource type="Texture2D" uid="uid://qq40mw2sgqn2" path="res://dark_aura_ball_04.png" id="5_qe0lk"]
+[ext_resource type="Texture2D" uid="uid://db6eg1g5pxqfs" path="res://dark_aura_ball_05.png" id="6_ubbf1"]
+[ext_resource type="Texture2D" uid="uid://bjisfoh43meu1" path="res://dark_aura_ball_06.png" id="7_uq6hd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wdy7n"]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_64vea")
+"duration": 2.0,
+"texture": ExtResource("2_paw44")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_xlbao")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_e4gti")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_qe0lk")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_ubbf1")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_uq6hd")
 }],
 "loop": 1,
 "name": &"ball1",
@@ -26,6 +46,7 @@ script = ExtResource("1_4chir")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_wdy7n")
 animation = &"ball1"
+frame_progress = 0.07760909
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2079550464]
 shape = SubResource("CircleShape2D_64vea")

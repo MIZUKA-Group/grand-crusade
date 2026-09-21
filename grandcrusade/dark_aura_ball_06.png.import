@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c34ywm1yyx0os"
-path="res://.godot/imported/ball test.png-620e822db85a86cb1b5ac07d19be498b.ctex"
+uid="uid://bjisfoh43meu1"
+path="res://.godot/imported/dark_aura_ball_06.png-cbda96d2914746957d48bcc39f2221a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ball test.png"
-dest_files=["res://.godot/imported/ball test.png-620e822db85a86cb1b5ac07d19be498b.ctex"]
+source_file="res://dark_aura_ball_06.png"
+dest_files=["res://.godot/imported/dark_aura_ball_06.png-cbda96d2914746957d48bcc39f2221a9.ctex"]
 
 [params]
 
